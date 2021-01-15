@@ -5,7 +5,7 @@ declare(strict_types=1);
  * This file is part of Hyperf.
  *
  * @link     https://www.hyperf.io
- * @document https://doc.hyperf.io
+ * @document https://hyperf.wiki
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
@@ -35,6 +35,7 @@ return [
         'open_http2_protocol' => true,
         'max_request' => 0,
         'socket_buffer_size' => 2 * 1024 * 1024,
+        'package_max_length' => 2 * 1024 * 1024,
     ],
     'callbacks' => [
         SwooleEvent::ON_BEFORE_START => [Hyperf\Framework\Bootstrap\ServerStartCallback::class, 'beforeStart'],
